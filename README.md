@@ -12,5 +12,5 @@ notifier and go_router's parsing pipeline.
 When StreamAuth broadcasts new event, the dependency will cause the go_router to reparse the current url
 which will also trigger the redirect.
 
-This is the UML(Unified modeling language) of AuthSream that mocks the auth services.
-![mermaid-diagram-2023-04-30-110847](https://user-images.githubusercontent.com/20933055/235344270-d2b120e1-bbfe-46ad-870a-cae65446ea9b.png)
+This is the mermaid diagram of UML(Unified modeling language) of AuthSream that mocks the auth services.
+![mermaid-diagram-2023-04-30-111836](https://user-images.githubusercontent.com/20933055/235344290-c17186fe-9967-42cd-be66-fbab1f7d68d4.png)
