@@ -1,0 +1,43 @@
+@startuml
+set namespaceSeparator ::
+
+class "async_redirection_navigation2::main.dart::MyApp" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "async_redirection_navigation2::main.dart::MyApp"
+
+class "async_redirection_navigation2::main.dart::MyHomePage" {
+  +String title
+  +State<MyHomePage> createState()
+}
+
+"flutter::src::widgets::framework.dart::StatefulWidget" <|-- "async_redirection_navigation2::main.dart::MyHomePage"
+
+class "async_redirection_navigation2::main.dart::_MyHomePageState" {
+  -int _counter
+  -void _incrementCounter()
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::State" <|-- "async_redirection_navigation2::main.dart::_MyHomePageState"
+
+class "async_redirection_navigation2::stream_auth.dart::StreamAuth" {
+  -String? _currentUser
+  -StreamController<String?> _userStreamController
+  +int refreshInterval
+  -Timer? _reshreshTimer
+  +String? currentUser
+  +Stream<String?> onCurrentUserChanged
+  +Future<bool> isSignIn()
+  -Timer _refreshUser()
+  +Future<void> signIn()
+  +Future<void> signOut()
+}
+
+"async_redirection_navigation2::stream_auth.dart::StreamAuth" o-- "dart::async::StreamController<String>"
+"async_redirection_navigation2::stream_auth.dart::StreamAuth" o-- "dart::async::Timer"
+"async_redirection_navigation2::stream_auth.dart::StreamAuth" o-- "dart::async::Stream<String>"
+
+
+@enduml
